@@ -1,0 +1,20 @@
+# Ignore sensitive configuration for HangmanSpectre
+appsettings.json
+gemini.key
+
+# dotnet user-secrets
+**/secrets.json
+
+# Environment files
+*.env
+.env.*
+
+# Build and IDE
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
