@@ -5,6 +5,11 @@
 [![Spectre.Console](https://img.shields.io/badge/Spectre.Console-0.57.2-4b9be6?style=for-the-badge)](https://spectreconsole.net/)
 [![Hosting+Config](https://img.shields.io/badge/Microsoft.Extensions-Hosting%20%26%20Configuration-0078D4?style=for-the-badge)](https://docs.microsoft.com/dotnet/core/extensions)
 
+## Preview
+
+<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/faba306f-402d-4e76-bcd4-c70a2e88857b" />
+
+
 Short description
 -----------------
 A console-based Hangman game using Spectre.Console for the UI. Word generation can be provided via a Gemini API; the API key is loaded from configuration.
@@ -48,7 +53,3 @@ Troubleshooting
 ---------------
 - If the program fails on startup due to a missing API key: check appsettings.json, create `gemini.key` or set the `Gemini__ApiKey` environment variable.
 - Configuration files are copied to the output folder (CopyToOutputDirectory). If you run from a different folder, ensure files are available in the app output directory.
-
-License
--------
-No project-specific license set — add a LICENSE file if needed.
