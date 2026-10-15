@@ -3,7 +3,6 @@
 [![.NET 10](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-Modern-8A2BE2?style=for-the-badge&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/dotnet/csharp)
 [![Spectre.Console](https://img.shields.io/badge/Spectre.Console-0.57.2-4b9be6?style=for-the-badge)](https://spectreconsole.net/)
-[![Hosting+Config](https://img.shields.io/badge/Microsoft.Extensions-Hosting%20%26%20Configuration-0078D4?style=for-the-badge)](https://docs.microsoft.com/dotnet/core/extensions)
 
 ## Preview
 
