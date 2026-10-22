@@ -8,6 +8,7 @@ public sealed class HangmanGame
 {
     private readonly HangmanUI _ui;
     private readonly GeminiWordService _wordService;
+    private readonly List<RoundResult> _history = new();
 
     public HangmanGame(HangmanUI ui, GeminiWordService wordService)
     {
@@ -38,7 +39,10 @@ public sealed class HangmanGame
                 word = _wordService.GetFallbackWord(difficulty);
             }
 
-            await PlayRoundAsync(word, difficulty);
+            RoundResult result = await PlayRoundAsync(word, difficulty);
+            _history.Add(result);
+
+            _ui.ShowResult(result, _history);
 
             playAgain = _ui.AskPlayAgain();
         }
@@ -46,7 +50,7 @@ public sealed class HangmanGame
         _ui.ShowGoodbye();
     }
 
-    private async Task PlayRoundAsync(
+    private async Task<RoundResult> PlayRoundAsync(
         string word,
         GameDifficulty difficulty)
     {
@@ -87,7 +91,12 @@ public sealed class HangmanGame
 
         bool won = word.All(guessedLetters.Contains);
 
-        _ui.ShowResult(word, won, maxLives);
+        return new RoundResult(
+            difficulty,
+            word,
+            incorrectGuesses.Count,
+            maxLives,
+            won);
     }
 
     private static int GetMaxLives(GameDifficulty difficulty)

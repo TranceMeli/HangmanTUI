@@ -14,6 +14,9 @@ internal static class Program
 {
     private static async Task Main()
     {
+        // Block letters and box-drawing characters need UTF-8 output.
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         using IHost host = Host.CreateDefaultBuilder()
             .ConfigureAppConfiguration((context, builder) =>
             {

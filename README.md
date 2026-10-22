@@ -6,12 +6,25 @@
 
 ## Preview
 
-<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/faba306f-402d-4e76-bcd4-c70a2e88857b" />
+![Game screen with gallows, word, keyboard and status](docs/screenshots/game.png)
+
+| Choose difficulty | Win |
+| --- | --- |
+| ![Start screen with difficulty cards](docs/screenshots/start.png) | ![Win screen with round history and charts](docs/screenshots/win.png) |
+
+| Game over |
+| --- |
+| ![Game over screen with gallows and statistics](docs/screenshots/lose.png) |
 
 
 Short description
 -----------------
 A console-based Hangman game using Spectre.Console for the UI. Word generation can be provided via a Gemini API; the API key is loaded from configuration.
+
+Key features
+------------
+- Spectre.Console UI in violet: block-letter titles, difficulty cards, live progress while loading, side-by-side game layout with an on-screen keyboard, round history table and charts
+- Layout adapts to the console window size
 
 Prerequisites
 -------------
